@@ -37,9 +37,11 @@ void setup() {
 void loop() {
   digitalWrite(12, HIGH);   // turn pin 12 to HIGH so LED turns on
   digitalWrite(11, HIGH);   // turn pin 12 to HIGH so LED turns on
+  digitalWrite(10, HIGH);   // turn pin 12 to HIGH so LED turns on
   delay(1000);                       // wait for a second
   digitalWrite(12, LOW);    // turn pin 12 to LOW so LED turns off
   digitalWrite(11, LOW);    // turn pin 12 to LOW so LED turns off
+  digitalWrite(10, LOW);    // turn pin 12 to LOW so LED turns off
   delay(1000);                       // wait for a second
 
   digitalWrite(12, HIGH);   // turn pin 12 to HIGH so LED turns on
