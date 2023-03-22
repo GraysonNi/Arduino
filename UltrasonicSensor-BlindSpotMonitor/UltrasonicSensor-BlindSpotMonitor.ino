@@ -23,8 +23,8 @@ void setup() {
   pinMode(trigPin,  OUTPUT);
   pinMode(echoPin, INPUT);
   pinMode(LEDlampRed, OUTPUT);
-  pinMode(LEDlampYellow,  OUTPUT);
-  pinMode(LEDlampGreen, OUTPUT);
+  pinMode(LEDlampClear,  OUTPUT);
+  pinMode(LEDlampBlue, OUTPUT);
   pinMode(soundbuzzer, OUTPUT);
 }
 void  loop() {
@@ -38,19 +38,19 @@ void  loop() {
   distanceincm = (durationindigit/5) / 29.1;
  
   if (distanceincm < 50) {
-      digitalWrite(LEDlampGreen, HIGH);
+      digitalWrite(LEDlampBlue, HIGH);
 }
   else {
-      digitalWrite(LEDlampGreen,  LOW);
+      digitalWrite(LEDlampBlue,  LOW);
   }
   
-  if (distance < 20) {
-    digitalWrite(LEDlampYellow,  HIGH);
+  if (distanceincm < 20) {
+    digitalWrite(LEDlampClear,  HIGH);
 }
   else {
-    digitalWrite(LEDlampYellow,LOW);
+    digitalWrite(LEDlampClear,LOW);
   }
-  if (distance  < 5) {
+  if (distanceincm  < 5) {
     digitalWrite(LEDlampRed, HIGH);
     sound = 1000;
 }
@@ -58,14 +58,14 @@ void  loop() {
     digitalWrite(LEDlampRed,LOW);
   }
  
-  if (distanceincm > 5 ||  distanceinsm <= 0){
+  if (distanceincm > 5 ||  distanceincm <= 0){
     Serial.println("Outside the permissible range of distances");
     noTone(soundbuzzer);
   }
   else {
-    Serial.print(distance);
+    Serial.print(distanceincm);
     Serial.println("  cm");
-    tone(buzzer, sound);
+    tone(soundbuzzer, sound);
   }
   
   delay(300);
