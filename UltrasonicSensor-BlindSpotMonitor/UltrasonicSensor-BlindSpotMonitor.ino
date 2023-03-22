@@ -9,12 +9,12 @@
  */
 
 
-#define trigPin 2
-#define echoPin 3
-#define LEDlampRed 4
-#define  LEDlampYellow 5
-#define LEDlampGreen 6 
-#define soundbuzzer 7
+int trigPin = 7;
+int echoPin = 6;
+int LEDlampRed = 10;
+int LEDlampClear = 11;
+int LEDlampBlue = 9; 
+int soundbuzzer = 3;
 int sound  = 500;
 
 
