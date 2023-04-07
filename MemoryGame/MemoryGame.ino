@@ -28,7 +28,7 @@ int sequence[MAX_LEVEL];
 int your_sequence[MAX_LEVEL];
 int level  = 1;
 
-int velocity = 1000;
+int velocity = 250;
 
 void setup() {
 pinMode(A0, INPUT);
@@ -195,5 +195,5 @@ delay(500);
 if  (level < MAX_LEVEL);
 level++;
 
-velocity -= 50; //increase difficulty
+velocity -= 10; //increase difficulty
 }
