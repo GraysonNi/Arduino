@@ -28,7 +28,7 @@ int sequence[MAX_LEVEL];
 int your_sequence[MAX_LEVEL];
 int level  = 1;
 
-int velocity = 250;
+int velocity = 100;
 
 void setup() {
 pinMode(A0, INPUT);
