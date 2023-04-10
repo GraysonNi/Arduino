@@ -170,7 +170,7 @@ digitalWrite(5, LOW);
 delay(250);
 }
 level  = 1;
-velocity = 1000;
+velocity = 100;
 }
 
 void right_sequence()
@@ -195,5 +195,5 @@ delay(500);
 if  (level < MAX_LEVEL);
 level++;
 
-velocity -= 10; //increase difficulty
+velocity -= 0; //increase difficulty
 }
